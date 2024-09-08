@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL, // Allow only your client URL
+    origin: "*", // Allow only your client URL
     credentials: true, // Allow credentials
   })
 );
