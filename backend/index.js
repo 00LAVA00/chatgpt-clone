@@ -17,10 +17,11 @@ const __dirname = path.dirname(__filename);
 
 app.use(
   cors({
-    origin: "*",
-    credentials: false,
+    origin: process.env.CLIENT_URL, // Allow only your client URL
+    credentials: true, // Allow credentials
   })
 );
+
 
 app.use(express.json());
 
